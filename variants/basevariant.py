@@ -33,12 +33,24 @@ class IVariant:
 
     @staticmethod
     @abstractmethod
+    def f_derivative(x: Decimal) -> Decimal:
+        """Преобразованная функция для формулы Гаусса
+
+        Args:
+            t (Decimal): значение переменной t
+        """
+        raise NotImplementedError
+
+    @staticmethod
+    @abstractmethod
     def a() -> Decimal:
+        """Левая граница интегрирования"""
         raise NotImplementedError
 
     @staticmethod
     @abstractmethod
     def b() -> Decimal:
+        """Правая граница интегрирования"""
         raise NotImplementedError
 
     @staticmethod

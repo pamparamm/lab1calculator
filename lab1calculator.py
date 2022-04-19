@@ -1,13 +1,16 @@
 from decimal import Decimal
+import imp
+import os
 from typing import Type
 
 from methods.basemethod import IMethod
 from methods.specialmethodpack import GaussMethod
 from variants.v10 import V10
+from variants.v5 import V5
 
 
 def main():
-    variant = V10
+    variant = V5
 
     methods: list[Type[IMethod]] = IMethod.__subclasses__()
     steps = [Decimal("0.1"), Decimal("0.05"), Decimal("0.025")]
@@ -42,7 +45,12 @@ def main():
             )
             output.append(f"{'':<{2*margin}}{'---':<8}")
 
-    print("\n".join(output))
+    filename = f"output/{V5.__name__}.yaml"
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
+    with open(filename, "w", encoding="utf8") as Йамль:
+        result = "\n".join(output)
+        Йамль.write(result)
+        print(result)
 
 
 if __name__ == "__main__":

@@ -4,3 +4,4 @@
 """
 import methods.methodpack1
 import methods.methodpack2
+import methods.eilermethod
