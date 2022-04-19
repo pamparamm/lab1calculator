@@ -12,4 +12,4 @@ class TrapMethod(IMethod):
     @staticmethod
     def calc_quadrature(v: Type[IVariant], step: Decimal) -> Decimal:
         """пук-пук-среньк"""
-        return Decimal(1)
+        return step**2

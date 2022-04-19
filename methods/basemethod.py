@@ -28,8 +28,7 @@ class IMethod:
             step (Decimal): шаг составной квадратурной формулы
         """
         return abs(
-            cls.calc_quadrature(variant, step)
-            - cls.calc_quadrature(variant, step * 2)
+            cls.calc_quadrature(variant, step) - cls.calc_quadrature(variant, step * 2)
         ) / ((2 ** cls.p()) - 1)
 
     @classmethod
@@ -41,6 +40,5 @@ class IMethod:
             step (Decimal): шаг составной квадратурной формулы
         """
         return (
-            cls.cptn_wrungel(variant, step)
-            / cls.cptn_wrungel(variant, step / 2)
+            cls.cptn_wrungel(variant, step) / cls.cptn_wrungel(variant, step / 2)
         ).ln() / Decimal("2").ln()
