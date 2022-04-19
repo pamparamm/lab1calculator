@@ -30,6 +30,7 @@ def main():
         for step in steps:
             method_res = method.calc_quadrature(variant, step)
             runge_res = method.cptn_wrungel(variant, step)
+
             output.append(f"{'':<{2*margin}}{'Step:':<10}{step}")
             output.append(
                 f"{'':<{2*margin}}{'N:':<10}{int((variant.b() - variant.a()) / step)}"

@@ -15,6 +15,10 @@ class V10(IVariant):
         return fnt
 
     @staticmethod
+    def f_derivative(x: Decimal) -> Decimal:
+        return -3 * x**2 / (1 + x**3) ** 2
+
+    @staticmethod
     def a() -> Decimal:
         return Decimal("0")
 
