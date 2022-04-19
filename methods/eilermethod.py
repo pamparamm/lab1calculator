@@ -4,7 +4,7 @@ from methods.basemethod import IMethod
 from variants.basevariant import IVariant
 
 
-class TrapMethod(IMethod):
+class EilerMethod(IMethod):
     @staticmethod
     def p() -> int:
         return 2
@@ -12,4 +12,4 @@ class TrapMethod(IMethod):
     @staticmethod
     def calc_quadrature(v: Type[IVariant], step: Decimal) -> Decimal:
         """пук-пук-среньк"""
-        return Decimal(1)
+        return step**2
