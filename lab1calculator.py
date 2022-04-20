@@ -4,11 +4,11 @@ from typing import Type
 
 from methods.basemethod import IMethod
 from methods.specialmethodpack import GaussMethod
-from variants.v5 import V5
+from variants.v2 import V2
 
 
 def main():
-    variant = V5
+    variant = V2
 
     methods: list[Type[IMethod]] = IMethod.__subclasses__()
     steps = [Decimal("0.1"), Decimal("0.05"), Decimal("0.025")]
