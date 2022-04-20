@@ -1,11 +1,9 @@
-from decimal import Decimal
-import imp
 import os
+from decimal import Decimal
 from typing import Type
 
 from methods.basemethod import IMethod
 from methods.specialmethodpack import GaussMethod
-from variants.v10 import V10
 from variants.v5 import V5
 
 
@@ -46,7 +44,7 @@ def main():
             )
             output.append(f"{'':<{2*margin}}{'---':<8}")
 
-    filename = f"output/{V5.__name__}.yaml"
+    filename = f"output/{variant.__name__}.yaml"
     os.makedirs(os.path.dirname(filename), exist_ok=True)
     with open(filename, "w", encoding="utf8") as Йамль:
         result = "\n".join(output)
