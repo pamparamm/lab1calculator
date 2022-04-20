@@ -34,10 +34,10 @@ class IVariant:
     @staticmethod
     @abstractmethod
     def f_derivative(x: Decimal) -> Decimal:
-        """Преобразованная функция для формулы Гаусса
+        """Первая производная подынтегральной функции
 
         Args:
-            t (Decimal): значение переменной t
+            x (Decimal): значение переменной x
         """
         raise NotImplementedError
 
